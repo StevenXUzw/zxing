@@ -1,5 +1,9 @@
 <img align="right" src="https://raw.github.com/wiki/zxing/zxing/zxing-logo.png"/>
 
+## Fork from zxing
+### Todo
+1、javase添加commond入参，指定hints的CHARACTER_SET
+
 ## Project in Maintenance Mode Only
 
 The project is in maintenance mode, meaning, changes are driven by contributed patches.
