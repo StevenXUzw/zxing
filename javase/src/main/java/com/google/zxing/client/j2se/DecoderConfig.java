@@ -73,6 +73,10 @@ final class DecoderConfig {
       variableArity = true)
   List<BarcodeFormat> possibleFormats;
 
+  @Parameter(names = "--character_set",
+      description = "character_set")
+  String characterSet;
+
   @Parameter(names = "--help",
       description = "Prints this help message",
       help = true)
@@ -110,6 +114,9 @@ final class DecoderConfig {
 
     Map<DecodeHintType, Object> hints = new EnumMap<>(DecodeHintType.class);
     hints.put(DecodeHintType.POSSIBLE_FORMATS, finalPossibleFormats);
+    if (null != characterSet && !"".equals(characterSet)) {
+      hints.put(DecodeHintType.CHARACTER_SET, characterSet);
+    }
     if (tryHarder) {
       hints.put(DecodeHintType.TRY_HARDER, Boolean.TRUE);
     }
